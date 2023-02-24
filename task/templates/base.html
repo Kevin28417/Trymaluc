@@ -14,45 +14,13 @@
     <nav class="navbar navbar-expand-lg bg-success fs-5 fw-bolder border border-2 border-dark">
         <div class="container">
           <div class="collapse navbar-collapse" id="navbarNav">
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Menu
-                </button>
-                <ul class="dropdown-menu">
-                    <li class="nav-item">
-                        <a href="/" class="nav-link">Pagina Principal</a>
-                    </li>
-        
-                    {% if user.is_authenticated %}
-                    <li class="nav-item">
-                        <a href="/cotizacion" class="nav-link">Cotizaciones</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/singout" class="nav-link">Cerrar sesion</a>
-                    </li>
-                    {% else %}
-                    <li class="nav-item">
-                        <a href="/singin" class="nav-link">Iniciar sesion</a>
-                    </li>
-                    {% endif %}
-                </ul>
-              </div>
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a href="/" class="nav-link">Pagina Principal</a>
                 </li>
-                {% if user.is_authenticated %}
                 <li class="nav-item">
                     <a href="/cotizacion" class="nav-link">Cotizaciones</a>
                 </li>
-                <li class="nav-item">
-                    <a href="/singout" class="nav-link">Cerrar sesion</a>
-                </li>
-                {% else %}
-                <li class="nav-item">
-                    <a href="/singin" class="nav-link">Iniciar sesion</a>
-                </li>
-                {% endif %}
             </ul>
           </div>
         </div>

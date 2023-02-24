@@ -20,8 +20,5 @@ from task import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", views.home, name = "Pagina_principal"),
-    path("singup/", views.registro , name = "registro"),
     path("cotizacion/", views.tareas , name = "tareas"),
-    path("singout/", views.cerrarSesion , name = "cerrar_sesion"),
-    path("singin/", views.iniciarSesion, name = "iniciar_sesion"),
 ]

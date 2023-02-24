@@ -8,16 +8,9 @@
             Pagina para Cotizaciones.
         </p>
     <div class="text-center">
-
-        {% if user.is_authenticated %}
         <a class="btn btn-success" href="/cotizacion">
             Cotizar
         </a>
-        {% else %}
-        <a class="btn btn-success" href="/singin">
-            Iniciar sesion
-        </a>
-        {% endif %}
     </div>
     </section>    
 </main>
