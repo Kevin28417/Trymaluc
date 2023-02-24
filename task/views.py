@@ -25,10 +25,10 @@ def tareas(request):
             p = round(m / r3, 2)
             i = request.POST["interno"]
             return render(request, "tareas.html", {
-                "prince": f"precio: {p}",
-                "alto": f"alto: {x}",
-                "ancho": f"ancho: {y}",
-                "calibre": f"calibre: {z}",
+                "prince": f"precio: $ {p} fabrica",
+                "alto": f"alto: {x} cm",
+                "ancho": f"ancho: {y} cm",
+                "calibre": f"calibre: {z} micras",
                 "material": f"material: {m}"
                     })
         except:
