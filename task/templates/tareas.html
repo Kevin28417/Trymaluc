@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block content %}
+
+<main class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="display-3 text-center fw-bold">Cotizaciones</h1>
+                <div class="content-flex ">
+                    <h2>Precios de material</h2>
+                    <table class="content-table">
+                        <tbody>
+                            <tr>
+                                <td>- Negro:</td>
+                                <td>1,9 &nbsp</td>
+                                <td></td>
+                                <td>- Boutique:</td>
+                                <td>&nbsp 3,2</td>
+                            </tr>
+                            <tr>
+                                <td>- Aguapanela:</td>
+                                <td>2,2 &nbsp</td>
+                                <td></td>
+                                <td>- Original:</td>
+                                <td>&nbsp 5</td>
+                            </tr>
+                            <tr>
+                                <td>- Post-industrial: &nbsp</td>
+                                <td>3,2 &nbsp</td>
+                                <td></td>
+                                <td>- Vivero:</td>
+                                <td>&nbsp 4,5</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <form class="card card-body mt-3" method="POST">
+                    {% csrf_token %}
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><input type="checkbox" id="interno" name="interno"> Fabrica</li>
+                        </ul>
+                      </div>
+                        <label for="alto" class="fw-bold">Alto</label>
+                        <input step="any" required="required" type="number" id="alto" name="alto" placeholder="alto en cm">
+                        <label for="ancho" class="fw-bold">Ancho</label>
+                        <input step="any" required="required" type="number" id="ancho" name="ancho" placeholder="ancho en cm">
+                        <label for="calibre" class="fw-bold">Calibre</label>
+                        <input step="any" required="required" type="number" id="calibre" name="calibre" placeholder="calibre en micras">
+                        <label for="material" class="fw-bold">Material</label>
+                        <input step="any" required="required" type="number" id="material" name="material" placeholder="precio del material">
+                            <div class="mt-3 text-center">
+                            <p class="mt-2 fw-bold">{{alto}} <br>
+                            {{ancho}} <br>
+                            {{calibre}} <br>
+                            {{material}} <br>
+                            {{prince}}</p>
+                        </div>
+                        <button class="btn btn-success mt-4 fw-bold">
+                            Cotizar
+                        </button>
+                </form>
+        </div>
+    </div>
+</main>
+    
+{% endblock %}

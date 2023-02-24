@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+
+<main class="container py-5 mt-10">
+    <section class="card card-body">
+        <h1 class="display-1 text-center">Inversiones Trymaluc C.A</h1>
+        <p class="text-center">
+            Pagina para Cotizaciones.
+        </p>
+    <div class="text-center">
+
+        {% if user.is_authenticated %}
+        <a class="btn btn-success" href="/cotizacion">
+            Cotizar
+        </a>
+        {% else %}
+        <a class="btn btn-success" href="/singin">
+            Iniciar sesion
+        </a>
+        {% endif %}
+    </div>
+    </section>    
+</main>
+{% endblock %}
